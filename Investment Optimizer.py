@@ -148,16 +148,11 @@ def askTickers():
 def main():
     welcome()
     tickers = askTickers()
-    start = getInput("Start date [YYYY-MM-DD] (default 2022-01-01): ",
-                      default="2022-01-01")
-    end   = getInput("End date   [YYYY-MM-DD] (default 2025-09-01): ",
-                      default="2025-09-01")
-    lam   = getInput("Risk aversion λ (default 0.5): ",
-                      default=0.5, cast=float)
-    rf    = getInput("Risk-free (annual) (default 0.02): ",
-                      default=0.02, cast=float)
-    k     = getInput("k for k-equal discrete (default 3): ",
-                      default=3, cast=int)
+    start = getInput("Start date [YYYY-MM-DD] (default 2022-01-01): ", default="2022-01-01")
+    end = getInput("End date   [YYYY-MM-DD] (default 2025-09-01): ", default="2025-09-01")
+    lam = getInput("Risk aversion λ (default 0.5): ", default=0.5, cast=float)
+    rf = getInput("Risk-free (annual) (default 0.02): ", default=0.02, cast=float)
+    k = getInput("k for k-equal discrete (default 3): ", default=3, cast=int)
 
     print("\nDownloading prices...")
     px = loadPrices(tickers, start, end)
@@ -173,17 +168,17 @@ def main():
 
     # report
     print("\nContinuous (long-only)")
-    print(f"  time   : {cont['time']:.3f}s")
-    print(f"  obj    : {cont['obj']:.6f}")
-    print(f"  return : {cont['er']:.4f} | var: {cont['var']:.6f} | sharpe: {cont['sharpe']:.4f}")
-    print(f"  weights: {np.round(cont['w'],4)} (sum={cont['w'].sum():.4f})")
+    print(f"time: {cont['time']:.3f}s")
+    print(f"obj: {cont['obj']:.6f}")
+    print(f"return: {cont['er']:.4f} | var: {cont['var']:.6f} | sharpe: {cont['sharpe']:.4f}")
+    print(f"weights: {np.round(cont['w'],4)} (sum={cont['w'].sum():.4f})")
 
     print(f"\nDiscrete k-equal (k={min(k, len(used))}, greedy)")
-    print(f"  time   : {disc['time']:.3f}s")
-    print(f"  obj    : {disc['obj']:.6f}")
-    print(f"  return : {disc['er']:.4f} | var: {disc['var']:.6f} | sharpe: {disc['sharpe']:.4f}")
-    print(f"  picked : {disc['picked']} (idx {disc['picked_idx']})")
-    print(f"  weights: {np.round(disc['w'],4)}")
+    print(f"time: {disc['time']:.3f}s")
+    print(f"obj: {disc['obj']:.6f}")
+    print(f"return: {disc['er']:.4f} | var: {disc['var']:.6f} | sharpe: {disc['sharpe']:.4f}")
+    print(f"picked: {disc['picked']} (idx {disc['picked_idx']})")
+    print(f"weights: {np.round(disc['w'],4)}")
 
     # quick plot
     pos = np.arange(len(used))
