@@ -5,9 +5,9 @@ The goal is to implement practical tools for investment allocation, risk managem
 
 ---
 
-## 📂 Projects
+## Projects
 
-### 1. Portfolio Optimizer (`portfolio_optimizer/`)
+### 1. Investment Optimizer
 Interactive script that applies **Modern Portfolio Theory (MPT)** to optimize stock allocations.
 
 - **Features**
