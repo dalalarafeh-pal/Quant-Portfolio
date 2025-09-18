@@ -1,9 +1,3 @@
-# portfolio_input.py
-# ------------------------------------------------------------
-# pip install yfinance pandas numpy cvxpy matplotlib
-# Run: python3 portfolio_input.py
-# ------------------------------------------------------------
-
 import time
 import numpy as np, pandas as pd, yfinance as yf, cvxpy as cp
 import matplotlib.pyplot as plt
