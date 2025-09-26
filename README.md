@@ -1,12 +1,3 @@
-# Quant Portfolio
-
-A collection of projects exploring **portfolio optimization** and **quantitative finance** techniques.  
-The goal is to implement practical tools for investment allocation, risk management, and performance evaluation. 
-
----
-
-## Projects
-
 ### 1. Investment Optimizer
 Interactive script that applies **Modern Portfolio Theory (MPT)** to optimize stock allocations.
 
