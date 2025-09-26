@@ -1,4 +1,4 @@
-### 1. Investment Optimizer
+### Investment Optimizer
 Interactive script that applies **Modern Portfolio Theory (MPT)** to optimize stock allocations.
 
 - **Features**
